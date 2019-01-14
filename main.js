@@ -1,4 +1,5 @@
 import { Car } from "./car.js";
+import { showValues } from "./showValues.js";
 
 const statsElement = document.querySelector('#stats');
 const canvas = document.querySelector('canvas');
@@ -11,7 +12,7 @@ const carImage = new Car(canvas.width / 2, canvas.height / 2);
 
 !function loop(){
 
-    showValues();
+    showValues(carImage);
 
     carImage.update();
 
@@ -24,18 +25,7 @@ const carImage = new Car(canvas.width / 2, canvas.height / 2);
 }();
 
 
-function showValues(){
-    statsElement.innerHTML = `
-        <table>
-            ${Object.keys(carImage).map(prop => `
-                <tr>
-                    <td>${prop}</td>
-                    <td>${carImage[prop]}</td>
-                </tr>
-            `).join('')}
-        </table>
-    `;
-}
+
 
 
 window.addEventListener('keydown', e => {
