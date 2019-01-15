@@ -1,7 +1,7 @@
 import { Car } from "./car.js";
 import { showValues } from "./showValues.js";
 
-const statsElement = document.querySelector('#stats');
+
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
 

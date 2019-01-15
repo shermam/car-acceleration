@@ -1,3 +1,5 @@
+const statsElement = document.querySelector('#stats');
+
 export function showValues(carImage){
     statsElement.innerHTML = `
         <table>
